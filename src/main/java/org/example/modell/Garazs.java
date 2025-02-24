@@ -42,7 +42,7 @@ public class Garazs {
                 garazs.remove(i);
             }
         }
-    }
+    } 
 
     @Override
     public String toString() {
