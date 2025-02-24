@@ -42,8 +42,8 @@ public class Auto{
         this.ára = ára;
     }
 
-    public boolean egyenlo(Auto a1, Auto a2){
-        if (a1.getFérőhely() == a2.getFérőhely() && a1.getÁra() == a2.getÁra()){
+    public boolean egyenlo(Auto a2){
+        if (this.getFérőhely() == a2.getFérőhely() && this.getÁra() == a2.getÁra()){
             return true;
         }
         return false;

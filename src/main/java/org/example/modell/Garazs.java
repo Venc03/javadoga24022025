@@ -1,31 +1,13 @@
 package org.example.modell;
 
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
-
-import static java.io.FileDescriptor.in;
-import static java.io.FileDescriptor.out;
 
 public class Garazs {
-    private int gférőhely;
     private ArrayList<Object> garazs = new ArrayList<>(5);
 
-    public Garazs(int gférőhely, ArrayList<Object> garazs) {
-        this.gférőhely = gférőhely;
+    public Garazs(ArrayList<Object> garazs) {
         this.garazs = garazs;
-    }
-
-    public int getGférőhely() {
-        return gférőhely;
-    }
-
-    public void setGférőhely(int gférőhely) {
-        this.gférőhely = gférőhely;
     }
 
     public ArrayList<Object> getGarazs() {
@@ -36,38 +18,30 @@ public class Garazs {
         this.garazs = garazs;
     }
 
-    public void be(){
-        FileInputStream fis = null;
-        try {
-            fis = new FileInputStream("garazs.txt");
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+    public boolean garazstele(){
+        boolean teli = false;
+        if (garazs.size() == 5){
+            teli = true;
         }
-        try {
-            fis.read();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        teli = false;
+        return teli;
     }
 
-    public void ki(){
-        FileOutputStream fos = null;
-        try {
-            fos = new FileOutputStream("garazs.txt");
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-        try {
-            fos.write(0);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    public void be(Auto auto){
+       if (garazstele()){
+           System.out.println("A garázs tele van.");
+       } else {
+           garazs.add(auto);
+       }
+    }
+
+    public void ki(Auto auto){
+       
     }
 
     @Override
     public String toString() {
         return "Garazs{" +
-                "gférőhely=" + gférőhely +
                 ", garazs=" + garazs +
                 '}';
     }
