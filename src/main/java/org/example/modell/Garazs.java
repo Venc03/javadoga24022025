@@ -4,7 +4,7 @@ package org.example.modell;
 import java.util.ArrayList;
 
 public class Garazs {
-    private ArrayList<Object> garazs = new ArrayList<>(5);
+    private ArrayList<Object> garazs;
 
     public Garazs(ArrayList<Object> garazs) {
         this.garazs = garazs;
@@ -42,7 +42,7 @@ public class Garazs {
                 garazs.remove(i);
             }
         }
-    } 
+    }
 
     @Override
     public String toString() {
