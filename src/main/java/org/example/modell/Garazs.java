@@ -32,11 +32,16 @@ public class Garazs {
            System.out.println("A garázs tele van.");
        } else {
            garazs.add(auto);
+           System.out.println("Auto sikeresen parkolva.");
        }
     }
 
     public void ki(Auto auto){
-       
+        for (int i = 0; i < garazs.size(); i++) {
+            if (garazs.get(i) == auto){
+                garazs.remove(i);
+            }
+        }
     }
 
     @Override
