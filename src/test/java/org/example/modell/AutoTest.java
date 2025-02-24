@@ -37,3 +37,5 @@ void Egyforma(){
     assertFalse(g1.garazstele());
 }
 }
+
+// VEGE

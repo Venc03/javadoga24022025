@@ -6,3 +6,5 @@ public class NemLetezoAutoExeption extends RuntimeException {
     }
 
 }
+
+// VEGE

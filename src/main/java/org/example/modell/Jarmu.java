@@ -52,3 +52,5 @@ public class Jarmu extends Auto {
                 '}';
     }
 }
+
+// VEGE
