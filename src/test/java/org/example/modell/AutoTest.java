@@ -19,7 +19,7 @@ class AutoTest {
     private Auto a6 = new Auto("asdqweq", 2, 53432500);
 
 @Test
-void Rendszam(){
+void Egyforma(){
     assertTrue(a1.egyenlo(a2));
     assertFalse(a1.egyenlo(a3));
 }
